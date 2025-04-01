@@ -9,8 +9,11 @@ This project implements a **Monte Carlo Tree Search (MCTS)**-based AI for playin
 ### **Key Features**
 
 ✅ **MCTS Implementation** – A simulation-based search algorithm for optimal move selection
+
 ✅ **Generic Game Framework** – Built using Java generics for extensibility
+
 ✅ **Unit Testing** – Ensures correctness and robustness
+
 ✅ **Performance Analysis** – Measures MCTS efficiency in decision-making
 
 ## **Project Goals**
@@ -97,9 +100,13 @@ The code is organized into two main packages:
 The final submission includes:
 
 ✅  **Code implementation** (MCTS + Tic-Tac-Toe logic)
+
 ✅  **Unit tests** (high coverage required)
+
 ✅  **Performance analysis** (timings, optimizations)
+
 ✅  **Documentation** (README, rules, execution steps)
+
 ✅  **Optional** – A demo video showing gameplay
 
 ## **References**
