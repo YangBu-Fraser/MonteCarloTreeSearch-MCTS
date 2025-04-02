@@ -73,5 +73,4 @@ public interface Node<G extends Game> {
         for (Iterator<Move<G>> it = state.moveIterator(state.player()); it.hasNext(); )
             addChild(state.next(it.next()));
     }
-
 }
