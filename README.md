@@ -6,6 +6,44 @@
 
 This project implements a **Monte Carlo Tree Search (MCTS)**-based AI for playing **Tic-Tac-Toe**. The goal is to develop an intelligent agent that can efficiently explore possible moves and make optimal decisions using MCTS, a powerful algorithm for decision-making in games.
 
+### **Project Structure**
+
+```
+.
++-- Java
+|   +-- src
+|   |   +-- it
+|   |   +-- main
+|   |   |   +-- java
+|   |   |   |   +-- com
+|   |   |   |   |   +-- phasmidsoftware
+|   |   |   |   |   |   +-- dsaipg
+|   |   |   |   |   |   |   +-- adt
+|   |   |   |   |   |   |   |   +-- bqs
+|   |   |   |   |   |   |   |   |   +-- UnorderedIterator.java
+|   |   |   |   |   +-- projects
+|   |   |   |   |   |   +-- mcts
+|   |   |   |   |   |   |   +-- chess
+|   |   |   |   |   |   |   +-- core
+|   |   |   |   |   |   |   |   +-- Game.java
+|   |   |   |   |   |   |   |   +-- Move.java
+|   |   |   |   |   |   |   |   +-- Node.java
+|   |   |   |   |   |   |   |   +-- RandomState.java
+|   |   |   |   |   |   |   |   +-- State.java
+|   |   |   |   |   |   |   +-- tictactoe
+|   |   |   |   |   |   |   |   +-- MCTS.java
+|   |   |   |   |   |   |   |   +-- Position.java
+|   |   |   |   |   |   |   |   +-- TicTacToe.java
+|   |   |   |   |   |   |   |   +-- TicTacToeNode.java
+|   |   |	+-- resources
+|   |   |   |	+-- img
+|   |   |   |	+-- 3000-common-words.txt
+|   |   |   |	+-- config.ini
+|   |   |   |	+-- log4j.properties
+|   |   +-- test
+```
+
+
 ### **Key Features**
 
 ✅ **MCTS Implementation** – A simulation-based search algorithm for optimal move selection
