@@ -2,7 +2,7 @@ package com.phasmidsoftware.dsaipg.projects.mcts.Gomoku;
 
 import com.phasmidsoftware.dsaipg.projects.mcts.core.Game;
 
-public class GmkGame implements Game<GomokuGame>{
+public class GmkGame implements Game<GmkGame>{
     private final int size;     // game board size
     public static final int DEFAUTL_SIZE = 15;
 
@@ -24,7 +24,7 @@ public class GmkGame implements Game<GomokuGame>{
     }
 
     @Override
-    public GomokuState start() {
-        return new GomokuState(this);
+    public GmkState start() {
+        return new GmkState(this);
     }
 }

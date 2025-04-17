@@ -57,12 +57,12 @@ public class GmkState implements State<GmkGame> {
 
         // Horizontal checks
         for (int row = 0; row < size; row++) {
-            for (int col = 0; col < size; col++) {
+            for (int col = 0; col <= size - 5; col++) {
                 int player = board[row][col];
                 if (player != 0 &&
-                player == board[row][col+1]&&
-                        player == board[row][col+2]&&
-                        player == board[row][col+3]&&
+                        player == board[row][col+1] &&
+                        player == board[row][col+2] &&
+                        player == board[row][col+3] &&
                         player == board[row][col+4]) {
                     return Optional.of(player-1);
                 }
@@ -78,7 +78,7 @@ public class GmkState implements State<GmkGame> {
                         player == board[row+2][col] &&
                         player == board[row+3][col] &&
                         player == board[row+4][col]) {
-                    return Optional.of(player - 1);  // Adjust for 0-indexed player
+                    return Optional.of(player - 1);
                 }
             }
         }
@@ -92,7 +92,7 @@ public class GmkState implements State<GmkGame> {
                         player == board[row+2][col+2] &&
                         player == board[row+3][col+3] &&
                         player == board[row+4][col+4]) {
-                    return Optional.of(player - 1);  // Adjust for 0-indexed player
+                    return Optional.of(player - 1);
                 }
             }
         }
@@ -106,7 +106,7 @@ public class GmkState implements State<GmkGame> {
                         player == board[row+2][col-2] &&
                         player == board[row+3][col-3] &&
                         player == board[row+4][col-4]) {
-                    return Optional.of(player - 1);  // Adjust for 0-indexed player
+                    return Optional.of(player - 1);
                 }
             }
         }
@@ -178,6 +178,6 @@ public class GmkState implements State<GmkGame> {
     }
 
     public List<GmkMove> getMoveHistory() {
-        return moveHistory;
+        return new ArrayList<>(moveHistory);
     }
 }
