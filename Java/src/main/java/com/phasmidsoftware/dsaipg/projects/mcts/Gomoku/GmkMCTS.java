@@ -77,9 +77,8 @@ public class GmkMCTS {
         }
 
         for (Node<GmkGame> child : children) {
-            if (!(child instanceof GmkNode)) continue;
+            if (!(child instanceof GmkNode gmkNode)) continue;
 
-            GmkNode gmkNode = (GmkNode) child;
             double wins = gmkNode.wins();
             double playouts = gmkNode.playouts();
             double parentPlayouts = node.playouts();
@@ -166,7 +165,7 @@ public class GmkMCTS {
         return false;
     }
 
-    // New method: Select a smart move for simulation
+    // Select a smart move for simulation
     private Move<GmkGame> selectSmartMove(GmkState state, List<Move<GmkGame>> movesList, int player) {
         int[][] board = state.getBoard();
         int size = state.game().getSize();
