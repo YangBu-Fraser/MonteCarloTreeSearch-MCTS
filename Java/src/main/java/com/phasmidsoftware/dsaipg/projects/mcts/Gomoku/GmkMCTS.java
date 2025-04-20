@@ -11,6 +11,7 @@ public class GmkMCTS {
     private static final int DEFAULT_ITERATIONS = 1000;
 
     private final int iterations;
+    private GmkNode currentRootNode; // To store the current root node for visualization
 
     public GmkMCTS() {
         this(DEFAULT_ITERATIONS);
@@ -18,6 +19,14 @@ public class GmkMCTS {
 
     public GmkMCTS(int iterations) {
         this.iterations = iterations;
+    }
+
+    /**
+     * Get the current root node for visualization purposes.
+     * @return The current root node of the MCTS search
+     */
+    public GmkNode getCurrentRootNode() {
+        return currentRootNode;
     }
 
     /**
@@ -506,6 +515,7 @@ public class GmkMCTS {
         // Otherwise, use MCTS to find the best move
         // Create the root node
         GmkNode rootNode = new GmkNode(state);
+        this.currentRootNode = rootNode; // Store root node for visualization
 
         // Expand the root node first
         expand(rootNode);
@@ -658,11 +668,8 @@ public class GmkMCTS {
             return findRandomMove(rootState);
         }
 
-        // Sort by combined score
         scoredMoves.sort((a, b) -> Integer.compare(b.score, a.score));
 
-        // Return the move with the highest combined score
         return scoredMoves.get(0).move;
     }
-
 }
